@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/live_login">
+
+    <fragment
+        android:id="@+id/live_login"
+        android:name="com.example.androidelementary.login.ui.login.LoginFragment"
+        android:label="LiveLogin" >
+
+    </fragment>
+
+
+</navigation>

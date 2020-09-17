@@ -10,7 +10,7 @@ import com.example.androidelementary.R;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
-    private Button mBtnLinear, mBtnHorizon, mBtnGrid;
+    private Button mBtnLinear, mBtnHorizon, mBtnGrid, mBtnWaterfall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mBtnGrid = findViewById(R.id.btn_grid);
         mBtnGrid.setOnClickListener(v -> {
             Intent intent = new Intent(this, GridRecyclerViewActivity.class);
+            startActivity(intent);
+        });
+        mBtnWaterfall = findViewById(R.id.btn_waterfall);
+        mBtnWaterfall.setOnClickListener(v -> {
+            Intent intent = new Intent(this, WaterfallRecyclerViewActivity.class);
             startActivity(intent);
         });
     }

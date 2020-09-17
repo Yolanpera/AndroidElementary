@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidelementary.R;
 
-public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
+public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHolder> {
 
     private Context mContext;
     private LinearRecyclerViewActivity.OnItemClickListener mListener;
 
-    public LinearAdapter(Context context, LinearRecyclerViewActivity.OnItemClickListener mListener){
+    public GridAdapter(Context context, LinearRecyclerViewActivity.OnItemClickListener mListener){
         this.mContext = context;
         this.mListener = mListener;
     }
@@ -25,7 +25,7 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
     @NonNull
     @Override
     public LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
+        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_grid_item, parent, false));
     }
 
     @Override
@@ -55,4 +55,6 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
             textView = itemView.findViewById(R.id.tv_title);
         }
     }
+
+
 }

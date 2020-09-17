@@ -8,9 +8,23 @@
     tools:context=".recyclerview.RecyclerViewActivity">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_linear"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:text="RecyclerView"/>
+        android:text="RecyclerView列表视图"/>
+
+
+    <Button
+        android:id="@+id/btn_horizon"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView水平视图"/>
+
+
+    <Button
+        android:id="@+id/btn_grid"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView网格视图"/>
 
 </LinearLayout>

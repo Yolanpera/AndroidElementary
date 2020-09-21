@@ -18,7 +18,7 @@ public class GridRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_recycler_view);
         mRvGrid = findViewById(R.id.rv_grid);
-        mRvGrid.setLayoutManager(new GridLayoutManager(GridRecyclerViewActivity.this,2));
+        mRvGrid.setLayoutManager(new GridLayoutManager(GridRecyclerViewActivity.this,3));
         GridAdapter gridAdapter = new GridAdapter(this, pos -> Toast.makeText(GridRecyclerViewActivity.this, "Click   " + pos, Toast.LENGTH_SHORT).show());
         mRvGrid.setAdapter(gridAdapter);
     }

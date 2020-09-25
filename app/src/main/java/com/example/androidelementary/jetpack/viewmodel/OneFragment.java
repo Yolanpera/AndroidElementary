@@ -34,7 +34,7 @@ public class OneFragment extends Fragment {
         View parentView =  inflater.inflate(R.layout.fragment_one, container, false);
         seekBar = parentView.findViewById(R.id.seek_Bar);
         shareDataViewModel = new ViewModelProvider(requireActivity()).get(ShareDataViewModel.class);
-        MutableLiveData<Integer> liveData = (MutableLiveData<Integer>)shareDataViewModel.getProgress();
+        MutableLiveData<Integer> liveData = shareDataViewModel.getProgress();
         liveData.observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer progress) {
@@ -63,7 +63,6 @@ public class OneFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        shareDataViewModel = new ViewModelProvider(this).get(ShareDataViewModel.class);
     }
 
 }

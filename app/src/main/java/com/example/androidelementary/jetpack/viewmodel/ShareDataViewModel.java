@@ -8,7 +8,7 @@ public class ShareDataViewModel extends ViewModel {
 
     private MutableLiveData<Integer> progress;
 
-    public LiveData<Integer> getProgress(){
+    public MutableLiveData<Integer> getProgress(){
         if (progress == null) {
             progress = new MutableLiveData<>();
         }

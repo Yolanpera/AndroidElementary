@@ -4,6 +4,13 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * 清楚 Observer 接口的四个抽象方法的含义
+ * 1 onSubscribe(Disposable d) 为Observer提供以同步和异步方式取消与Observable的连接的方法。
+ * 2 onNext(T t) 为Observer提供一个新的观察对象
+ * 3 onError(Throwable e) 通知 Observer Observable 发生错误情况。
+ * 4 onComplete() 通知 Observer Observable 已经发送完毕
+ */
 public class demo4 {
     public static void main(String[] args) {
 

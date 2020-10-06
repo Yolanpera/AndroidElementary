@@ -1,15 +1,13 @@
 package com.example.androidelementary.rxjava.basic;
 
-import io.reactivex.Notification;
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
-import io.reactivex.functions.Consumer;
 
+/**
+ * doXXX() 在事件被处理的各个生命周期中执行的方法
+ */
 public class Demo8 {
     public static void main(String[] args) {
         Observable.create((ObservableOnSubscribe<Integer>) e -> {

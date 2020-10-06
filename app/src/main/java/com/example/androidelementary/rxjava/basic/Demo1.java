@@ -9,7 +9,12 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-
+/**
+ * 最基本的使用
+ * 1 创建 Observable
+ * 2 创建 Observer
+ * 3 实现订阅 subscribe
+ */
 public class Demo1 {
 
     private static Observable<Integer> observable;
@@ -42,7 +47,7 @@ public class Demo1 {
 //         onNext("C");
 //         onCompleted();
 
-        // 3 扩展方法之 from
+        // 3. RxJava 扩展方法之 from
 //        Integer[] words = {2, 3, 4};
 //        observable = Observable.fromArray(words);
     }

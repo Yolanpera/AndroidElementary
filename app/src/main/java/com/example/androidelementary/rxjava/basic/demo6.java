@@ -13,9 +13,15 @@ import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * 操作符
+ * concat 将四个以下 Observable 组合为一个
+ * merge  也是组合，没有个数限制，而且按时间顺序组合
+ * intervalRange 发送一序列事件，可以设置发送初始值，个数，初始延迟，周期和线程等参数
+ */
 public class demo6 {
     public static void main(String[] args) throws InterruptedException {
-        Observable.concat(Observable.just(1, 2, 3), Observable.just(4, 5, 6), Observable.just(7, 8, 9)).subscribe(System.out::print);
+        Observable.concat(Observable.just(1, 2, 3), Observable.just(4, 5, 6), Observable.just(7, 8, 9)).subscribe(System.out::println);
 //        Observable.merge(
 //                Observable.create((ObservableOnSubscribe<Integer>) emitter -> {
 //                    emitter.onNext(1);
@@ -35,7 +41,7 @@ public class demo6 {
                 .observeOn(Schedulers.newThread()).subscribe(new Observer<Long>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-                        System.out.println("接收到了d事件");
+                        System.out.println("\n接收到了d事件");
                         System.out.println(d.toString());
                     }
 

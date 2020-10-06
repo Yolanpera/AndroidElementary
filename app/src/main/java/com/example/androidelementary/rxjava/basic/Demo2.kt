@@ -13,5 +13,13 @@ fun main(){
             .subscribeOn(Schedulers.io())
             .observeOn(Schedulers.computation())
             .subscribe(::println)
-    Thread.sleep(10000)
+    Thread.sleep(1000)
+
+    //上面的代码等价于下面：
+//    Observable.just(1,2,3)
+//            .map { i -> "I am value $i" }
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(Schedulers.computation())
+//            .subscribe(::println)
+//    Thread.sleep(1000)
 }

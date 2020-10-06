@@ -6,6 +6,9 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * 将之前的三步曲写成一句代码
+ */
 public class Demo3 {
 
     public static void main(String[] args) {

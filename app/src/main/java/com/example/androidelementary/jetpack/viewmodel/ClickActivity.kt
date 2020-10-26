@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_click.*
 
 class ClickActivity : AppCompatActivity() {
 
-    lateinit var viewModel: ClickModel
+    private lateinit var viewModel: ClickModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

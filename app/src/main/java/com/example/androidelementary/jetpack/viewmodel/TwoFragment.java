@@ -21,17 +21,13 @@ public class TwoFragment extends Fragment {
     private ShareDataViewModel shareDataViewModel;
     private SeekBar seekBar;
 
-    public static OneFragment newInstance() {
-        return new OneFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View parentView =  inflater.inflate(R.layout.fragment_two, container, false);
         seekBar = parentView.findViewById(R.id.seek_Bar);
         shareDataViewModel = new ViewModelProvider(requireActivity()).get(ShareDataViewModel.class);
-        MutableLiveData<Integer> liveData = (MutableLiveData<Integer>)shareDataViewModel.getProgress();
+        MutableLiveData<Integer> liveData = shareDataViewModel.getProgress();
         liveData.observe(getViewLifecycleOwner(), progress -> seekBar.setProgress(progress));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -52,9 +48,4 @@ public class TwoFragment extends Fragment {
         return parentView;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        shareDataViewModel = new ViewModelProvider(this).get(ShareDataViewModel.class);
-    }
 }

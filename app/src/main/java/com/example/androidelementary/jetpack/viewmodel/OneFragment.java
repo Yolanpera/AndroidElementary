@@ -24,10 +24,6 @@ public class OneFragment extends Fragment {
     private ShareDataViewModel shareDataViewModel;
     private SeekBar seekBar;
 
-    public static OneFragment newInstance() {
-        return new OneFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -35,12 +31,7 @@ public class OneFragment extends Fragment {
         seekBar = parentView.findViewById(R.id.seek_Bar);
         shareDataViewModel = new ViewModelProvider(requireActivity()).get(ShareDataViewModel.class);
         MutableLiveData<Integer> liveData = shareDataViewModel.getProgress();
-        liveData.observe(getViewLifecycleOwner(), new Observer<Integer>() {
-            @Override
-            public void onChanged(Integer progress) {
-                seekBar.setProgress(progress);
-            }
-        });
+        liveData.observe(getViewLifecycleOwner(), progress -> seekBar.setProgress(progress));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -48,21 +39,12 @@ public class OneFragment extends Fragment {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStartTrackingTouch(SeekBar seekBar) { }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
+            public void onStopTrackingTouch(SeekBar seekBar) { }
         });
         return parentView;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
     }
 
 }

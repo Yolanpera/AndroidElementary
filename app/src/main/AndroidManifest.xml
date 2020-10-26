@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Handler.HandlerActivity"></activity>
         <activity android:name=".jetpack.viewmodel.BatteryShowActivity">
+        </activity>
+        <activity android:name=".jetpack.viewmodel.ClickActivity" />
+        <activity android:name=".animation.AfterJumpActivity" />
+        <activity android:name=".animation.BeforeJumpActivity" />
+        <activity android:name=".jetpack.viewmodel.ShareDataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".jetpack.viewmodel.ClickActivity"></activity>
-        <activity android:name=".animation.AfterJumpActivity" />
-        <activity android:name=".animation.BeforeJumpActivity"></activity>
-        <activity android:name=".jetpack.viewmodel.ShareDataActivity">
         </activity>
         <activity android:name=".jetpack.viewmodel.TimerWithLiveDataActivity" />
         <activity android:name=".jetpack.viewmodel.TimerActivity" />

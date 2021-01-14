@@ -26,7 +26,6 @@ public class HandlerActivity extends AppCompatActivity {
         //sendMessage
         mHandler = new Handler() {
             public void handleMessage(@NonNull Message msg) {
-                super.handleMessage(msg);
                 if (msg.what == 0) {
                     textView.setText("修改后的文字");
                 }

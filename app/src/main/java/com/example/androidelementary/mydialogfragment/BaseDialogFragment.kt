@@ -79,7 +79,6 @@ abstract class BaseDialogFragment : DialogFragment() {
         var dialogStyle = STYLE_NO_TITLE
         var dialogTheme = -1
         var windowFeature = Window.FEATURE_NO_TITLE
-        var isVertical = true
         var canceledOnTouchOutside = true
         var dimAmount = 0.5f
         var gravity = 0

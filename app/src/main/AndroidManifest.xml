@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".viewgroup.ConstraintLayoutActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".rtl.RTLActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +31,7 @@
         <activity android:name=".recyclerview.GridRecyclerViewActivity" />
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
         <activity android:name=".recyclerview.LinearRecyclerViewActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity
             android:name=".login.ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

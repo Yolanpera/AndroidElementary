@@ -13,16 +13,17 @@
             android:name=".viewgroup.CollapsingToolbarActivity"
             android:label="@string/title_activity_collapsing_toolbar"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".intent.IntentActivity" />
+        <activity android:name=".viewgroup.ConstraintLayoutActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".rtl.RTLActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intent.IntentActivity" />
-        <activity android:name=".viewgroup.ConstraintLayoutActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".rtl.RTLActivity"></activity>
         <activity android:name=".languageDetect.LanguageDetectActivity" />
         <activity android:name=".Handler.HandlerActivity" />
         <activity android:name=".jetpack.viewmodel.BatteryShowActivity" />

@@ -18,25 +18,11 @@ import com.example.androidelementary.R;
 
 public class RTLActivity extends AppCompatActivity {
 
-    private View parentView;
-    private Button changeBtn;
-    private ViewGroup micRoombanner;
-
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_r_t_l);
-        parentView = findViewById(R.id.parentView);
-        changeBtn = findViewById(R.id.change_btn);
-        micRoombanner = findViewById(R.id.mic_room_banner);
-        changeBtn.setOnClickListener((v)->{
-            parentView.setBackgroundColor(Color.TRANSPARENT);
-        });
-        changeBtn.setOnLongClickListener(v -> {
-            v.setVisibility(View.GONE);
-            return true;
-        });
     }
 
 }

@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".recyclerview.livemode.SwitchActivity"></activity>
         <activity
             android:name=".viewgroup.CollapsingToolbarActivity"
             android:label="@string/title_activity_collapsing_toolbar"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".intent.IntentActivity" />
         <activity android:name=".viewgroup.ConstraintLayoutActivity" />
         <activity android:name=".MainActivity" />
@@ -37,8 +37,7 @@
         <activity android:name=".recyclerview.GridRecyclerViewActivity" />
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
         <activity android:name=".recyclerview.LinearRecyclerViewActivity" />
-        <activity android:name=".recyclerview.RecyclerViewActivity">
-        </activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
         <activity
             android:name=".login.ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

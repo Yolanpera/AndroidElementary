@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,7 +21,7 @@ import com.example.androidelementary.R;
 /**
  * Created by ypp on 2020/12/23
  */
-public class CountDownView extends FrameLayout {
+public class CountDownView extends FrameLayout implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
     public static final int NUM_4000 = 4000;
     private static final int NUM_1000 = 1000;
@@ -28,6 +30,7 @@ public class CountDownView extends FrameLayout {
     private int mCountDown;
     private TextView mTextView;
     private Animation mAnimation;
+    private GestureDetector mGestureDetector;
 
     public CountDownView(@NonNull Context context) {
         super(context);
@@ -59,5 +62,58 @@ public class CountDownView extends FrameLayout {
         layoutParams.gravity = Gravity.CENTER;
         addView(mTextView, layoutParams);
         mAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.count_down);
+        mGestureDetector = new GestureDetector(this);
+        mGestureDetector.setIsLongpressEnabled(false);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        boolean consume = mGestureDetector.onTouchEvent(event);
+        return consume;
+    }
+
+    @Override
+    public boolean onDown(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent e) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent e) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        return false;
+    }
+
+    @Override
+    public boolean onSingleTapConfirmed(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent e) {
+        return false;
     }
 }

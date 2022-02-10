@@ -1,10 +1,8 @@
 package com.example.androidelementary
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidelementary.login.ui.login.LoginViewModel
 
 class MainActivity : AppCompatActivity() {
 

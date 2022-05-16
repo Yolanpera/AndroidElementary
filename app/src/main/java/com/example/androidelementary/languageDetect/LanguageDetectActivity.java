@@ -1,7 +1,5 @@
 package com.example.androidelementary.languageDetect;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +8,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.StaticLayout;
 import android.text.TextUtils;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -39,7 +36,7 @@ public class LanguageDetectActivity extends AppCompatActivity {
         mTitleView = findViewById(R.id.title);
         editText = (EditText) findViewById(R.id.input);
         textView = findViewById(R.id.text);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.down_button);
 
         String title = "TIKTOKERLERYARISIYOK";
         mTitleView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

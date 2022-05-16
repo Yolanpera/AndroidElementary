@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".funnyview.FunnyViewActivity">
+
+    <com.example.androidelementary.funnyview.MovingView
+        android:id="@+id/moving"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:background="@color/design_default_color_on_secondary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/down_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:layout_marginTop="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.example.androidelementary.funnyview.MotionEventView
+        android:id="@+id/motion_view"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

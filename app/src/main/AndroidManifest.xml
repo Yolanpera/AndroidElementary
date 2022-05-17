@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".funnyview.FunnyViewActivity"
-            android:launchMode="singleInstance">
-        </activity>
+        <activity android:name=".video.SeekBarTestActivity"></activity>
+        <activity
+            android:name=".funnyview.FunnyViewActivity"
+            android:launchMode="singleInstance"></activity>
         <activity
             android:name=".viewgroup.CollapsingToolbarActivity"
             android:label="@string/title_activity_collapsing_toolbar"

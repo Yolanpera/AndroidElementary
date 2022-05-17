@@ -1,5 +1,7 @@
 package com.example.androidelementary.utils
 
+import android.content.Context
+import android.content.Intent
 import android.view.View
 
 /**
@@ -22,3 +24,8 @@ fun View.setOnSingleClickListener(duration: Long = 500, listener: (View) -> Unit
     }
 }
 
+fun <T> View.registerChildActivity(context: Context, clazz: Class<T>) {
+    setOnClickListener {
+        context.startActivity(Intent(context, clazz))
+    }
+}
